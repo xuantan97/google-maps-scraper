@@ -168,8 +168,9 @@ detailed_reviews_view = View(
         ExpandListField(
             "detailed_reviews",
             fields=[
-                # Field("name"),
-                # Field("reviewer_profile"),
+                Field("name"),
+                Field("reviewer_profile"),
+                Field("reviewer_avatar"),
                 Field("review_id"),
                 Field("rating"),
                 Field("review_text"),

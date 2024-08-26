@@ -69,8 +69,9 @@ def process_reviews(reviews):
 
         lk = review.get("likes")
         processed_review = {
-            # "name": review.get("user_name"),
-            # "reviewer_profile": review.get("user_url"),            
+            "name": review.get("user_name"),
+            "reviewer_profile": review.get("user_url"),
+            "reviewer_avatar": review.get("user_avatar"),                  
             "review_id": review.get("review_id"),
             "rating": int(review.get("rating")),
             "review_text": review.get("text"),

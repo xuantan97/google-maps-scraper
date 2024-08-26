@@ -39,6 +39,7 @@ review_default_result = {
     "other_ratings": "",  # other ratings such as rooms, service, placing, etc
     "trip_type_travel_group": "",
     "user_name": "",
+    "user_avatar": "",
     "user_is_local_guide": None,
     "user_reviews": "",  # total number of reviews made by the user
     "user_photos": "",  # total number of photos added by the user
@@ -413,6 +414,13 @@ class GoogleMapsAPIScraper:
                 # if len(user_photos) > 0:
         except Exception as e:
             self._handle_review_exception(result, review, "user_data")
+
+
+        # Parse user avatar
+        try: 
+            result["user_avatar"] = review.find(True, class_="lDY1rd").get("src")
+        except Exception as e:
+            self._handle_review_exception(result, review, "user_avatar")
 
         # Parse review id
         try:
