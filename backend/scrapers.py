@@ -312,7 +312,7 @@ fls = [
 try:
     Server.add_scraper(   
         google_maps_scraper,
-        create_all_task=True, 
+        # create_all_task=True, 
         split_task=split_task_by_query,
         get_task_name=get_task_name,
         filters=fls,
@@ -325,7 +325,7 @@ try:
         ],
         views=[
             overview_view,
-            featured_reviews_view,
+            # featured_reviews_view,
             detailed_reviews_view,
         ],
         remove_duplicates_by="place_id"
@@ -333,7 +333,7 @@ try:
 except:
     Server.add_scraper(   
         google_maps_scraper,
-        create_all_task=True, 
+        # create_all_task=True, 
         split_task=split_task_by_query,
         get_task_name=get_task_name,
         filters=fls,
@@ -346,7 +346,7 @@ except:
         ],
         views=[
             overview_view,
-            featured_reviews_view,
+            # featured_reviews_view,
             detailed_reviews_view,
         ],
     )

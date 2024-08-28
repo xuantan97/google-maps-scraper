@@ -12,4 +12,7 @@ COPY . /app
 
 RUN python run.py install
 
+EXPOSE 3000
+EXPOSE 8000
+
 CMD ["python", "run.py"]
